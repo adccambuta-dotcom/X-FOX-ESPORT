@@ -1,0 +1,26 @@
+X-FOX ESPORT — V10 ESPORTS COMPLETO
+====================================
+
+Esta versão parte da V9 e acrescenta:
+- Ranking público calculado pela taxa de vitórias dos jogadores aprovados.
+- Histórico público de partidas por divisão.
+- Agenda pública de treinos.
+- Notícias e anúncios publicados pela administração.
+- Formulário público de recrutamento; candidaturas ficam pendentes até análise.
+- Galeria pública de imagens.
+- Gestão destas áreas no painel do administrador.
+
+INSTALAÇÃO
+1. Faz uma cópia de segurança da tua pasta V9.
+2. Extrai esta versão numa pasta nova.
+3. Confirma supabase-config.js: mantém a Project URL e a chave pública publishable/anon do teu projecto. Nunca uses service_role.
+4. No Supabase > SQL Editor, executa UMA VEZ o ficheiro supabase-setup-v10.sql.
+5. Abre index.html com Live Server. Entra na conta de administrador e abre Área de Membros para gerir as novas secções.
+6. Actualiza o site com Ctrl+F5.
+
+IMPORTANTE
+- Mantém os SQL anteriores V4, V7, V8 e V9; não os voltes a executar.
+- O ranking é calculado a partir de vitórias e partidas dos perfis aprovados.
+- As candidaturas não criam automaticamente contas nem aprovam jogadores: o administrador analisa-as e depois pode aprovar a conta correspondente na gestão normal de membros.
+- Para notícias e galeria, usa URLs HTTPS públicos para as imagens.
+- Os treinos e partidas ficam públicos; não coloques informação privada ou links de acesso restrito nesses campos.

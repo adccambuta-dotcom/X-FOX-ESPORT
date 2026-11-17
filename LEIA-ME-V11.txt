@@ -1,0 +1,26 @@
+X-FOX ESPORT V11 — CATÁLOGO DE HERÓIS
+
+Novidades:
+- Catálogo público em cards com imagem e nome.
+- Filtro por função: Tanque, Assassino, Mago, Atirador, Lutador e Suporte.
+- Pesquisa pelo nome do herói.
+- Estatísticas agregadas por herói: taxa de vitória, vitórias e partidas.
+- Lista pública dos jogadores X-FOX que utilizam cada herói.
+- Administração pode adicionar heróis e definir a respectiva função.
+
+Instalação:
+1. Faz uma cópia da pasta V10.
+2. Extrai esta V11 numa pasta nova.
+3. Mantém o teu supabase-config.js actual, com a mesma URL e chave pública.
+4. No Supabase > SQL Editor, executa apenas supabase-setup-v11.sql.
+5. Abre o index.html com Live Server e actualiza com Ctrl+F5.
+
+Para adicionar heróis:
+No painel administrativo, em Catálogo de heróis, introduz nome, função e URL HTTPS público da imagem.
+Depois, associa o herói aos jogadores e regista vitórias e partidas na área de estatísticas individuais.
+A taxa agregada é calculada por total de vitórias / total de partidas, não pela média simples das percentagens individuais.
+
+Não voltes a executar os SQL anteriores.
+
+
+CORRECCAO V11.1: o plantel público já não exclui automaticamente contas de administrador. Para aparecer no plantel, o perfil continua a precisar de status approved e de divisão AO ou EU atribuída.

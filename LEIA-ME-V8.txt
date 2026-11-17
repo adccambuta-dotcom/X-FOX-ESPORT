@@ -1,0 +1,18 @@
+X-FOX ESPORT V8 — CÁLCULO AUTOMÁTICO DE VITÓRIAS
+
+ALTERAÇÕES
+- O administrador introduz jogos disputados e vitórias; a percentagem actualiza-se imediatamente no círculo.
+- A taxa é calculada por vitórias / partidas jogadas × 100.
+- A validação impede mais vitórias do que partidas.
+- Para cada herói, o administrador também introduz vitórias e partidas; o site calcula a taxa automaticamente.
+- O valor é guardado no Supabase quando se clica em Guardar perfil ou Guardar taxa.
+
+INSTALAÇÃO
+1. Faz cópia de segurança da pasta actual.
+2. Substitui os ficheiros area-membros.html e supabase-setup-v8.sql pelos desta versão, mantendo os restantes ficheiros V7 e a tua configuração supabase-config.js.
+3. No Supabase SQL Editor, executa uma vez o supabase-setup-v8.sql.
+4. Abre o site com Live Server e actualiza com Ctrl+F5.
+
+EXEMPLO
+3 vitórias em 5 partidas = 60%.
+8 vitórias em 10 partidas = 80%.

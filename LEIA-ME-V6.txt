@@ -1,0 +1,24 @@
+X-FOX ESPORT — V6
+
+NOVIDADES
+- Percentagens de vitórias apresentadas em círculos de progresso. O arco enche proporcionalmente até 100%.
+- Estatística geral da equipa e estatísticas individuais públicas.
+- Painel do administrador e área de membros também mostram percentagens circulares.
+- Ícones enviados pelo utilizador para as funções: Jungle, Mid Lane, Roamer, Gold Lane e EXP Lane.
+- Novo logótipo X-FOX aplicado no cabeçalho do site e da área de membros.
+- Instagram @xfoxesport e remoção da funcionalidade de mensagens mantidos.
+
+INSTALAÇÃO
+1. Faz uma cópia de segurança da pasta actual.
+2. Extrai o ZIP e abre xfox_site no VS Code.
+3. Confirma a chave pública em supabase-config.js (não uses service_role).
+4. Mantém o SQL V4/V5 já executado; não é necessária alteração de base de dados para os círculos.
+5. Abre index.html com Live Server.
+
+COMO FUNCIONA
+Taxa de vitórias = vitórias / jogos disputados x 100.
+O círculo enche de 0% a 100%. Os números continuam a ser actualizados pelo administrador na Área de Membros.
+Se a base de dados ainda não tiver estatísticas ou perfis aprovados, os círculos começam em 0% ou mostram a mensagem de ausência de dados.
+
+FUNÇÕES E ÍCONES
+Jungler, Mid Lane, Roamer, Gold Lane e EXP Lane usam os cinco ficheiros de imagem fornecidos.

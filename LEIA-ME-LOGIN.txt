@@ -1,0 +1,30 @@
+X-FOX ESPORT — LOGIN E REGISTO PÚBLICO
+======================================
+
+O site inclui agora interface de login, criação de conta, sessão e terminar sessão através do Supabase Auth.
+O registo é público: qualquer pessoa pode criar conta com e-mail e palavra-passe.
+
+IMPORTANTE: a autenticação real só ficará activa depois de ligares o site ao teu projecto Supabase. Um HTML estático, sozinho, não consegue guardar contas de forma segura.
+
+PASSOS DE CONFIGURAÇÃO
+1. Cria um projecto em https://supabase.com/ e confirma o teu e-mail.
+2. No painel do projecto, abre Project Settings > API (ou API Keys).
+3. Copia a Project URL e a chave pública anon/publishable. NUNCA uses a chave service_role no navegador.
+4. Abre xfox_site/supabase-config.js e substitui os dois valores COLOCA_AQUI pelos teus dados.
+5. No Supabase, abre SQL Editor e executa o conteúdo de supabase-setup.sql.
+6. Em Authentication > URL Configuration, configura o Site URL para o endereço final onde vais publicar o site. Adiciona também os Redirect URLs necessários.
+7. Em Authentication > Providers > Email, mantém o fornecedor Email activo. Recomendamos confirmação de e-mail.
+8. Publica a pasta xfox_site num alojamento HTTPS (por exemplo, Netlify, Vercel ou GitHub Pages). Não abras o site por file://; usa um servidor local ou alojamento HTTPS, porque os módulos JavaScript e a autenticação precisam de origem web.
+9. Testa o registo com um e-mail teu, confirma o e-mail recebido e depois testa login e logout.
+
+SEGURANÇA
+- As palavras-passe são tratadas pelo Supabase Auth; não são guardadas no HTML nem na tabela profiles.
+- A chave anon/publishable é própria para uso no cliente, mas a segurança dos dados depende de políticas RLS no backend.
+- Nunca publiques a chave service_role.
+- Neste momento, qualquer pessoa pode registar-se. A conta criada não dá automaticamente permissões de administrador nem acesso a um painel de gestão.
+- O formulário é uma base de autenticação; perfis, cargos, painel administrativo e gestão de dados serão etapas separadas.
+
+FICHEIROS
+index.html            Site com interface de login/registo
+supabase-config.js    Dados de ligação a preencher
+supabase-setup.sql    SQL para tabela de perfis e regras de segurança

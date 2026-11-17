@@ -1,0 +1,18 @@
+X-FOX ESPORT V9 — PERFIS PÚBLICOS E HERÓIS
+
+- Plantéis AO e EU carregados do Supabase, com perfis aprovados.
+- Cada cartão de jogador é clicável.
+- Ao clicar, abre o perfil com função, divisão, país, jogos, vitórias e taxa.
+- As taxas por herói e as fotografias do catálogo aparecem apenas dentro do perfil individual.
+- O acesso público limita-se a campos seleccionados de perfis aprovados; e-mails e contas pendentes não são apresentados.
+
+INSTALAÇÃO
+1. Faz cópia de segurança da V8.
+2. Extrai esta V9 numa pasta nova e abre no VS Code.
+3. Confirma supabase-config.js com a URL e chave pública do teu projecto.
+4. Supabase > SQL Editor: executa uma vez supabase-setup-v9.sql.
+5. Abre index.html com Live Server e actualiza com Ctrl+F5.
+
+Não voltes a executar SQL V4/V7/V8.
+Para um jogador aparecer no plantel público, o perfil tem de estar aprovado e ter divisão AO ou EU.
+Para aparecerem heróis, o administrador deve registar taxas e imagens no catálogo.

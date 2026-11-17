@@ -1,0 +1,31 @@
+X-FOX ESPORT — V4: APROVAÇÃO DE MEMBROS E CAIXA DE MENSAGENS
+
+1) CONFIGURAR CREDENCIAIS
+- Abra supabase-config.js.
+- O Project URL já está preenchido.
+- Substitua COLOCA_AQUI_A_CHAVE_PUBLICA_ANON pela Publishable key do seu projecto.
+- Use apenas a chave pública sb_publishable_... (ou anon legacy).
+- NUNCA use service_role ou secret key no browser.
+
+2) ACTUALIZAR A BASE DE DADOS
+- No Supabase, abra SQL Editor > New query.
+- Abra/copiar o conteúdo de supabase-setup-v4.sql.
+- Antes de executar, localize o bloco final "PROMOÇÃO DO ÚNICO ADMINISTRADOR".
+- Substitua TEU_EMAIL_AQUI pelo e-mail exacto da conta que já criou e confirmou.
+- Retire os dois traços "--" do início das três linhas do UPDATE para activar o comando.
+- Execute o SQL.
+- O SQL define essa conta como administrador único e aprova-a.
+- Não promova outra conta. Não partilhe a chave secreta.
+
+3) TESTAR
+- Abra index.html através do Live Server.
+- Inicie sessão com a conta administradora.
+- Clique em ÁREA DE MEMBROS.
+- O administrador verá inscrições, poderá aprovar/rejeitar, editar os campos do jogador e responder às mensagens.
+- Uma conta comum verá o estado da sua inscrição e poderá enviar mensagens à administração.
+
+IMPORTANTE
+- Os novos registos passam a ser criados automaticamente como "pending" (pendentes).
+- As mensagens são privadas: o membro vê as próprias mensagens; o administrador vê todas.
+- A segurança é aplicada por Row Level Security no Supabase, não apenas escondendo botões no HTML.
+- O site está em desenvolvimento local. Antes da publicação, acrescente o domínio final em Authentication > URL Configuration.

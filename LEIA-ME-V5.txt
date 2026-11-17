@@ -1,0 +1,26 @@
+X-FOX ESPORT — V5 (site actualizado)
+
+ALTERAÇÕES
+- Novo logótipo fornecido pelo utilizador.
+- Link para Instagram @xfoxesport.
+- Removida a área de envio/recepção de mensagens na área de membros e no painel de administração.
+- Funções apresentadas com símbolos e nomes.
+- Estatísticas individuais: jogos, vitórias e taxa de vitórias.
+- Estatísticas gerais da equipa: jogos, vitórias e taxa de vitórias.
+
+INSTALAÇÃO
+1. Faz uma cópia de segurança da pasta actual do site.
+2. Extrai este ZIP para uma pasta nova.
+3. Abre supabase-config.js e cola a tua chave pública anon/publishable no local indicado. Não uses a service_role key.
+4. No Supabase > SQL Editor, executa o ficheiro supabase-setup-v4.sql COMPLETO. Este script mantém a promoção do administrador comentada no fim; se ainda não promoveste a tua conta, substitui TEU_EMAIL_AQUI pelo e-mail exacto da tua conta e descomenta apenas as quatro linhas do UPDATE.
+5. Abre index.html com Live Server.
+6. Entra com a conta de administrador e abre Área de Membros. Aí podes editar jogos e vitórias de cada jogador e os números gerais da equipa.
+
+CÁLCULO
+Taxa de vitórias = (vitórias / jogos disputados) x 100. Se não houver jogos, mostra 0%. As vitórias não podem exceder o total de jogos.
+
+NOTAS
+- Os valores iniciais das estatísticas são zero; preenche os números reais no painel de administrador.
+- O site público apresenta apenas perfis aprovados e não administradores.
+- A tabela antiga member_messages pode continuar na base de dados, mas deixou de ser usada pela interface.
+- A imagem do logótipo foi aplicada exactamente como recebida; se o padrão quadriculado estiver incorporado na imagem, será visível no site.

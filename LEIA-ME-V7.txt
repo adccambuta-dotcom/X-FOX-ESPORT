@@ -1,0 +1,21 @@
+X-FOX ESPORT — V7
+
+NOVAS FUNCIONALIDADES
+1. Administrador pode atribuir jogadores à X-FOX AO ou X-FOX EU no campo Divisão/Equipa do perfil.
+2. Catálogo de heróis: adicionar o nome do herói e o URL da respectiva imagem.
+3. Estatísticas de heróis por jogador: escolher o herói e registar taxa de vitória (0–100%) e número de partidas. A taxa é apresentada publicamente com a fotografia do herói.
+4. Gestão de torneios: publicar torneios para AO, EU ou ambas as divisões; adicionar data, estado/classificação, descrição e link; eliminar torneios.
+5. Removidos o botão e a secção de candidatura/recrutamento.
+
+INSTALAÇÃO
+- Faz cópia de segurança da V6.
+- Extrai a pasta XFOX_ESPORT_V7 e abre-a no VS Code.
+- Mantém o supabase-config.js e a chave pública (anon/publishable) que já configuraste. Nunca coloques service_role no site.
+- No Supabase > SQL Editor, executa uma vez o ficheiro supabase-setup-v7.sql. Não voltes a executar o SQL V4 se já está aplicado.
+- Abre index.html com Live Server.
+
+IMAGENS DOS HERÓIS
+O catálogo permite adicionar todos os heróis com as respectivas imagens através de URL. Para preencher o catálogo, o administrador adiciona cada herói e o URL da imagem correspondente. Não foram incluídas imagens de heróis de terceiros nesta versão.
+
+SEGURANÇA
+As operações de inserir, alterar e eliminar heróis, taxas e torneios ficam restritas ao administrador através de RLS no Supabase.
